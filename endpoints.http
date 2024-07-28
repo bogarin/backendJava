@@ -1,0 +1,49 @@
+GET http://localhost:8888/api/v1/products?p=0&limit=5&sort=name,desc HTTP/1.1
+
+###
+
+GET  http://localhost:8888/api/v1/products/11 HTTP/1.1
+
+###
+
+POST http://localhost:8888/api/v1/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "iphone",
+    "price":0.00,
+    "categoryId":1
+}
+
+###
+
+PUT http://localhost:8888/api/v1/products/11 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "iphone",
+    "price":200.00,
+    "categoryId":1
+}
+###
+
+PUT http://localhost:8888/api/v1/products/11/disabled HTTP/1.1
+content-type: application/json
+
+{
+    "name": "iphone",
+    "price":200.00,
+    "categoryId":1
+}
+
+###
+
+POST http://localhost:8888/api/v1/customers HTTP/1.1
+content-type: application/json
+
+{
+    "username": "bogarin",
+    "name":"ramon",
+    "password":"bogarin12",
+    "repeatedPassword":"bogarin12"
+}
